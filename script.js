@@ -48,7 +48,19 @@ class LinkedList {
         }
     }
     at(index) {
-
+        if (index >= this.size) {
+            return null;
+        } else if (index < 0) {
+            return null;
+        } else {
+            let current = this.head
+            let counter = 0;
+            while (counter !== index) {
+                current = current.next;
+                counter++;
+            }
+            return current;
+        }
     }
     pop() {
 
