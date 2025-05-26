@@ -66,13 +66,13 @@ class LinkedList {
 
     }
     contains(value) {
-
+        // Search whether the linked list contains "value"
     }
     find(value) {
-
+        // Find where the linked list contains "value"
     }
     toString() {
-        
+        // Convert linked list to string
     }
 }
 
