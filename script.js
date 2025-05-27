@@ -63,10 +63,31 @@ class LinkedList {
         }
     }
     pop() {
-
+        if (this.size === 0) {
+            return null;
+        } else if (this.size === 1) {
+            this.head = null;
+            this.size--;
+        } else {
+            let secondLast = this.at(size - 2);
+            secondLast.next = null;
+            this.size--;
+        } 
     }
     contains(value) {
-        // Search whether the linked list contains "value"
+        if (this.size === 0) {
+            return false;
+        } else {
+            let current = this.head;
+            while (current.value !== value && current.next !== null){
+                current = current.next;
+            }
+            if (current.value === value) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
     find(value) {
         // Find where the linked list contains "value"
