@@ -90,10 +90,37 @@ class LinkedList {
         }
     }
     find(value) {
-        // Find where the linked list contains "value"
+        if (this.size === 0) {
+            return null;
+        } else {
+            let current = this.head;
+            let index = 0;
+            while (current.value !== value && current.next !== null){
+                current = current.next;
+                index++;
+            }
+            if (current.value === value) {
+                return index;
+            } else {
+                return null;
+            }
+        }
+        
     }
     toString() {
-        // Convert linked list to string
+        if (this.size === 0) {
+            return "null";
+        }
+        let result = "";
+        let current = this.head;
+        while (current.next !== null) {
+            result += `( ${current.value} ) -> `;
+            current = current.next;
+        }
+        result += `( ${current.value} ) -> `;
+        result += "null";
+        return result;
+
     }
 }
 
@@ -103,3 +130,5 @@ class Node {
         this.next = null;
     }
 }
+
+export { Node, LinkedList }
