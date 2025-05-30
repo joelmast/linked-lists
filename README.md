@@ -15,21 +15,12 @@ Features
 The project requires the creation of a LinkedList class/factory and a Node class/factory. The LinkedList class should include the following core functionalities:
 
  -   append(value): Adds a new node to the end of the list.
- -
  -   prepend(value): Adds a new node to the beginning of the list.
- -
  -  size(): Returns the total number of nodes.
- -
  -  head(): Returns the first node.
- -
  -  tail(): Returns the last node.
- -
  -  at(index): Returns the node at a specified index.
-
  -  pop(): Removes the last element.
-
  -  contains(value): Checks if a given value exists in the list.
-
  -  find(value): Returns the index of a node containing the value, or null if not found.
-
  -  toString(): Provides a string representation of the list (e.g., ( value ) -> ( value ) -> null).
